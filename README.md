@@ -1,10 +1,10 @@
 # otsu
 
-A typed, zero-dependency [osu! API v2](https://osu.ppy.sh/docs/index.html) client for Node.js 20+.
+A typed, zero-dependency [osu! API v2](https://osu.ppy.sh/docs/index.html) client for Node.js 22+.
 
 ## Requirements
 
-- **Node.js 20+** (uses native `fetch`)
+- **Node.js 22+** (uses native `fetch`)
 - An [OAuth application](https://osu.ppy.sh/home/account/edit#oauth) for API access
 
 ## Install

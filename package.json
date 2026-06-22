@@ -1,6 +1,6 @@
 {
   "name": "otsuapi",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A typed, zero-dependency osu! API v2 client for Node.js",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -87,6 +87,6 @@
     "vitest": "^3.2.4"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   }
 }
