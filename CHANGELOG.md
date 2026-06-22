@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Minimum Node.js version raised to 22 (Node 20 reached end-of-life on 2026-04-30)
 - CI now tests on Node 22 and 24
 
+### Fixed
+
+- Narrow return type of `rankings.get()` by ranking type (`performance`/`score`/`charts` vs `country`)
+
 ## [0.1.0] - 2026-06-22
 
 ### Added
