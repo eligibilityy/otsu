@@ -1,0 +1,19 @@
+# Dependency directories
+node_modules/
+
+# Build output
+dist/
+coverage/
+*.tgz
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Environment files
+.env.*
+!.env.example
+
+# Token file
+.osu-tokens.json
+
+PUBLISHING.md

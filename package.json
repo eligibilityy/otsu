@@ -1,0 +1,92 @@
+{
+  "name": "otsuapi",
+  "version": "0.1.0",
+  "description": "A typed, zero-dependency osu! API v2 client for Node.js",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eligibilityy/otsu.git"
+  },
+  "bugs": "https://github.com/eligibilityy/otsu/issues",
+  "homepage": "https://github.com/eligibilityy/otsu#readme",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./errors": {
+      "import": {
+        "types": "./dist/errors/index.d.ts",
+        "default": "./dist/errors/index.js"
+      },
+      "require": {
+        "types": "./dist/errors/index.d.cts",
+        "default": "./dist/errors/index.cjs"
+      }
+    },
+    "./auth": {
+      "import": {
+        "types": "./dist/auth/index.d.ts",
+        "default": "./dist/auth/index.js"
+      },
+      "require": {
+        "types": "./dist/auth/index.d.cts",
+        "default": "./dist/auth/index.cjs"
+      }
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "prepublishOnly": "npm run build",
+    "test": "vitest run tests/unit",
+    "test:watch": "vitest tests/unit",
+    "test:guest": "vitest run tests/guest",
+    "test:authenticated": "vitest run tests/authenticated",
+    "test:all": "vitest run",
+    "test:integration": "vitest run tests/guest",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "example": "tsx examples/live.ts",
+    "example:search": "tsx examples/search.ts",
+    "example:rankings": "tsx examples/rankings.ts",
+    "example:home": "tsx examples/home-search.ts",
+    "example:auth": "tsx examples/auth-login.ts"
+  },
+  "keywords": [
+    "osu",
+    "osu-api",
+    "osu-api-v2",
+    "osu-api-v2-js",
+    "api-client",
+    "typescript",
+    "oauth2",
+    "otsuapi"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "prettier": "^3.6.2",
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
