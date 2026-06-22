@@ -58,7 +58,7 @@
     "test:authenticated": "vitest run tests/authenticated",
     "test:all": "vitest run",
     "test:integration": "vitest run tests/guest",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.examples.json",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "example": "tsx examples/live.ts",

@@ -32,6 +32,12 @@ export class RankingsResource {
    * });
    * const { ranking } = await client.rankings.get(Ruleset.Osu, "performance");
    */
+  get(mode: Ruleset, type: "country", options?: GetRankingsOptions): Promise<CountryRankingsResult>;
+  get(
+    mode: Ruleset,
+    type: Exclude<RankingType, "country">,
+    options?: GetRankingsOptions,
+  ): Promise<RankingsResult>;
   get(
     mode: Ruleset,
     type: RankingType,
